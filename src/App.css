@@ -1,0 +1,167 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: light;
+    src: url('../public/Kanit-Light.ttf');
+}
+
+@font-face {
+    font-family: medium;
+    src: url('../public/Kanit-Medium.ttf');
+}
+
+@font-face {
+    font-family: regular;
+    src: url('../public/Kanit-Regular.ttf');
+}
+
+.navbar{
+    width: 100%;
+    height: 100px;
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.binance{
+    margin-left: 20px;
+    font-size: 25px;
+    font-family: 'medium';
+    color: #fbbf24;
+    cursor: pointer;
+}
+
+.sign-in{
+    font-family: 'medium';
+    font-size: 20px;
+    transition-duration: 0.2s;
+}
+
+.sign-in:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.sign-up{
+    font-family: 'medium';
+    font-size: 20px;
+    margin-right: 20px;
+    transition-duration: 0.2s;
+}
+
+.sign-up:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.sign-form{
+    display: flex;
+    align-items: center;
+}
+
+.sign-space{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.trade-bg{
+    background-image: url('../public/img/tradebg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-trade-show-case{
+    background-color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-family: 'medium';
+    border-radius: 4px;
+    opacity: 0.8;
+}
+
+.sign-in-bg{
+    background-image: url('../public/img/tradebg2.jpg');
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sign-in-box{
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    /* box-shadow: 5px 5px 2px 5px rgb(223, 220, 220); */
+}
+
+.sign-in-header{
+    font-size: 25px;
+    font-family: 'medium';
+}
+
+.sign-in-box input{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 40px;
+    margin-top: 20px;
+    text-indent: 5px;
+    font-family: 'medium';
+}
+
+.sign-in-box button{
+    width: 100%;
+    height: 40px;
+    font-family: 'medium';
+    font-size: 20px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 4px;
+    background-color: #16a34a;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.sign-in-box button:hover{
+    background-color: #117737;
+}
+
+.sign-in-ask{
+    margin-top: 20px;
+    font-family: 'light';
+    margin-left: 10px;
+}
+
+.sign-in-ask-click{
+    margin-top: 20px;
+    font-family: 'regular';
+    margin-left: 10px;
+    color: #0ea5e9;
+    cursor: pointer;
+}
+
+.sign-in-ask-warp{
+    display: flex;
+}
