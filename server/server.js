@@ -14,8 +14,39 @@ const dbcon = mysql2.createConnection({
 })
 
 
-app.get("/api/test", (req, res) => {
-    res.json({ status: 200 })
+app.post("/api/sign_up", (req, res) => {
+    let email = req.body.email
+    let password = req.body.password
+
+    dbcon.query("SELECT * FROM users WHERE email = ?", [email], (err, user)=>{
+        if(err) throw err
+
+        if(user.length > 0){
+            res.json({inserted: false})
+        }else{
+            dbcon.query("INSERT INTO users (email, password) VALUES (?, ?)", [email, password], (err, inserted)=>{
+                if(err) throw err
+
+                res.json({inserted: true})
+            })
+        }
+    })
+})
+
+
+app.post("/api/sign_in", (req, res)=>{
+    let email = req.body.email
+    let password = req.body.password
+
+    dbcon.query("SELECT * FROM users WHERE email = ? AND password = ?", [email, password], (err, user)=>{
+        if(err) throw err
+
+        if(user.length > 0){
+            res.json({success: true})
+        }else{
+            res.json({success: false})
+        }
+    })
 })
 
 app.listen(3001, () => {
